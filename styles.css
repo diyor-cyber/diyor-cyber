@@ -1,0 +1,89 @@
+:root {
+  --glass-bg: rgba(255,255,255,0.12);
+  --glass-border: rgba(255,255,255,0.2);
+  --blur: blur(18px);
+  --text: #ffffff;
+  --accent: #cfcfcf;
+  --gradient: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background: var(--gradient);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+/* Glass Card */
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: var(--blur);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 60px;
+}
+
+nav a {
+  color: var(--text);
+  text-decoration: none;
+  margin-left: 25px;
+  font-weight: 500;
+}
+
+/* Hero */
+.hero {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero h1 {
+  font-size: 5rem;
+  letter-spacing: 8px;
+}
+
+/* Product Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+/* Buttons */
+button {
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  background: white;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: translateY(-3px);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  nav {
+    padding: 20px;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+  }
+}
